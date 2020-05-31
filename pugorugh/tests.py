@@ -87,63 +87,6 @@ class UserDogModelTest(TestCase):
         self.assertEqual(userdog1.status, 'l')
 
 
-# class UserPrefModelTest(TestCase):
-#     def setUp(self):
-#         self.user1 = get_user_model().objects.create(username='User1')
-#
-#         self.dog1 = Dog.objects.create(name='Dog1', age=6, gender='m', size='s')
-#         self.dog2 = Dog.objects.create(name='Dog2', age=42, gender='f', size='s')
-#         self.dog3 = Dog.objects.create(name='Dog3', age=42, gender='f', size='m', type='r')
-#         self.dog4 = Dog.objects.create(name='Dog4', age=100, gender='u', size='s')
-#
-#         self.user1.userpref = UserPref()
-        # self.user2.userpref = UserPref(age=Age.Choices.YOUNG)
-        # self.user3.userpref = UserPref(age=Age.Choices.ADULT)
-        # self.user4.userpref = UserPref(gender=Gender.Choices.FEMALE)
-        # self.user5.userpref = UserPref(size=Size.Choices.SMALL)
-        # self.user6.userpref = UserPref(type=Type.Choices.ROBOT)
-        # self.user7.userpref = UserPref(age=Age.Choices.ADULT, size=Size.Choices.MEDIUM)
-
-    # def test_no_filters(self):
-    #     self.user1.userpref = UserPref()
-
-        # dog1 = Dog.objects.create(name='Dog1', age=6, gender='m', size='s')
-        # dog2 = Dog.objects.create(name='Dog2', age=42, gender='f', size='s')
-        # dog3 = Dog.objects.create(name='Dog3', age=42, gender='f', size='m', type='r')
-        # dog4 = Dog.objects.create(name='Dog4', age=100, gender='u', size='u')
-
-        # dogs = self.user1.userpref.get_preferred_dogs()
-        # self.assertEqual(len(dogs), 4)
-
-    # def test_age_filter(self):
-    #     self.user1.userpref = UserPref(age=Age.Choices.ADULT)
-    #
-    #     dogs = self.user1.userpref.get_preferred_ages()
-    #     preferred_dogs = self.user1.userpref.get_preferred_dogs()
-    #     dogs = self.user2.userpref.get_preferred_ages()
-    #     preferred_dogs = self.user2.userpref.get_preferred_dogs()
-    #     dogs2 = self.user3.userpref.get_preferred_ages()
-    #
-        # self.assertEqual(len(dogs), 2)
-        # self.assertQuerysetEqual(dogs, map(repr, preferred_dogs))
-    #     self.assertEqual(len(dogs2), 2)
-    #
-    # def test_gender_filter(self):
-    #     dogs = self.user4.userpref.get_preferred_dogs()
-    #     self.assertEqual(len(dogs), 2)
-    #
-    # def test_size_filter(self):
-    #     dogs = self.user5.userpref.get_preferred_dogs()
-    #     self.assertEqual(len(dogs), 2)
-    #
-    # def test_type_filter(self):
-    #     dogs = self.user6.userpref.get_preferred_dogs()
-    #     self.assertEqual(len(dogs), 1)
-    #
-    # def test_multiple_filters(self):
-    #     dogs = self.user7.userpref.get_preferred_dogs()
-    #     self.assertEqual(len(dogs), 1)
-
 class UserPrefModelTest(TestCase):
     def setUp(self):
         self.user1 = get_user_model().objects.create(username='User1')

@@ -5,6 +5,29 @@
   transition: $args;
 }
 
+.link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  
+  color: inherit;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: normal;
+  font-size: inherit;
+  box-shadow: none;
+}
+
+.link-button:hover,
+.link-button:focus {
+  text-decoration: none;
+  box-shadow: none;
+  
+}
+
 // Dog Controls
 .icon-button {
   background-color: transparent;

@@ -172,8 +172,8 @@ export default class DogContainer extends React.Component {
     return (
       <div>
         {this.contents()}
-        <p className="text-centered"><a onClick={this.handlePreferencesClick}>Set Preferences</a></p>
-        {/*<p className="text-centered"><button onClick={this.handlePreferencesClick}>Set Preferences</button></p>*/}
+        {/*<p className="text-centered"><a onClick={this.handlePreferencesClick}>Set Preferences</a></p>*/}
+        <p className="text-centered"><button onClick={this.handlePreferencesClick}>Set Preferences</button></p>
       </div>
     );
   }

@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 import TokenAuth from '../lib/token-auth';
 
-// TODO: check this
 const Err = styled.p`
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1em;
@@ -21,11 +20,11 @@ export default class DogForm extends React.Component {
     this.state = {
       message: '',
       errors: {},
-      name: 'test',
+      name: '',
       image_filename: '',
       image: null,
-      breed: 'test',
-      age: '-1',
+      breed: '',
+      age: '',
       gender: 'u',
       size: 'u',
       type: 'm',

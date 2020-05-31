@@ -68,7 +68,8 @@ export default class PugOrUgh extends React.Component {
                 </ul>
                 {
                   TokenAuth.loggedIn() &&
-                    <a onClick={this.handleLogoutClick}>Logout {TokenAuth.getUsername()}</a>
+                    // eslint-disable-next-line
+                    <a href="# " onClick={this.handleLogoutClick}>Logout {TokenAuth.getUsername()}</a>
                 }
               </div>
               <div className='circle--fluid--cell circle--fluid--secondary'>
@@ -84,7 +85,7 @@ export default class PugOrUgh extends React.Component {
                       <a onClick={this.setView.bind(this, 'disliked')}>Disliked</a>
                     </li>
                     <li key='3' className={this.state.viewName === 'new' ? 'current-tab' : ''}>
-                      <a onClick={this.setView.bind(this, 'new')}>Add New Dog</a>
+                      <a className={'button-link'} onClick={this.setView.bind(this, 'new')}>Add New Dog</a>
                     </li>
                   </ul>
                 </nav>}

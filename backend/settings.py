@@ -24,7 +24,6 @@ SECRET_KEY = ')=(5z=31tmvh##pwof+@v%bxjwj0154dt9boc9u57p4_y@tg8@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-# DEBUG_TOOLBAR = True
 DEBUG_TOOLBAR = False
 CROSS_ORIGIN = True
 
@@ -125,7 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [os.path.join(os.path.dirname(__file__), '../pugorugh/static/')]
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 #  Media
 

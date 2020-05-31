@@ -39,7 +39,7 @@ class Size(TextChoicesWrapper):
         LARGE = 'l', 'Large'
         EXTRA_LARGE = 'xl', 'Extra Large'
 
-# TODO: change to static methods
+
 def get_date_range(youngest, oldest):
     today = date.today()
     return today - rd(months=oldest), today - rd(months=youngest)
