@@ -32,7 +32,9 @@ _If you haven't installed Node.js, you can find instructions at
     - `pip install -r requirements.txt`
 5. Run migrations to initialize the database.
     - `python manage.py migrate` 
-6. Run `data_import.py` to populate the database.
+6. Change into the pugorugh directory, then into scripts.
+    - `cd pugorugh/scripts`
+7. Run `data_import.py` to populate the database.
     - `python data_import.py` 
     (You will see a success message once data has loaded.)
     
