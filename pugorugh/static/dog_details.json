@@ -16,22 +16,6 @@
     "size": "s"
   },
   {
-    "name": "Muffin",
-    "image_filename": "3.jpg",
-    "breed": "Boxer",
-    "age": 24,
-    "gender": "f",
-    "size": "xl"
-  },
-  {
-    "name": "Bjorn",
-    "image_filename": "4.jpg",
-    "breed": "Swedish Vallhund",
-    "age": 36,
-    "gender": "m",
-    "size": "m"
-  },
-  {
     "name": "Carl Sagan",
     "image_filename": "sagan.jpg",
     "breed": "Carl",
@@ -51,6 +35,22 @@
     "gender": "f",
     "size": "s",
     "type": "r"
+  },
+  {
+    "name": "Muffin",
+    "image_filename": "3.jpg",
+    "breed": "Boxer",
+    "age": 24,
+    "gender": "f",
+    "size": "xl"
+  },
+  {
+    "name": "Bjorn",
+    "image_filename": "4.jpg",
+    "breed": "Swedish Vallhund",
+    "age": 36,
+    "gender": "m",
+    "size": "m"
   },
   {
     "name": "Hercules",
