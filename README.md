@@ -18,7 +18,7 @@ The React app and Django will be run on separate ports.
 _If you haven't installed Node.js, you can find instructions at
 [How to Install Node.js and NPM on Windows](https://blog.teamtreehouse.com/install-node-js-npm-windows)._
 
-###I. Set up the Django back end
+### I. Set up the Django back end
 
 1. Download the project and change into the project directory.
     (The one containing `manage.py`.)
@@ -37,15 +37,18 @@ _If you haven't installed Node.js, you can find instructions at
 7. Run `data_import.py` to populate the database.
     - `python data_import.py` 
     (You will see a success message once data has loaded.)
+8. Return to the project directory.
+    - `cd..`
+    - `cd..`
     
-###II. Set up the React front end 
+### II. Set up the React front end 
 
 1. Change into the frontend directory.
     - `cd frontend`
 2. Use NPM to install the project's Javascript dependencies.
     - `npm install`
 
-###III. Run the project
+### III. Run the project
 
 Assuming nothing went horribly wrong with the last step, you should now be able
 to run everything. You'll be running Django on port 8000 and React on port 3000.
