@@ -12,9 +12,6 @@ from django.dispatch import receiver
 from .choices import Age, Gender, Size, Type
 
 
-# from .managers import DogManager, UserDogManager
-
-
 class Dog(models.Model):
     added_by = models.ForeignKey(
         get_user_model(),
