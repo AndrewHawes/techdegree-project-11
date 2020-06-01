@@ -30,16 +30,9 @@ _If you haven't installed Node.js, you can find instructions at
     - Linux/Mac: `source env/bin/activate`
 4. Install the project's Python dependencies.
     - `pip install -r requirements.txt`
-5. Run migrations to initialize the database.
-    - `python manage.py migrate` 
-6. Change into the pugorugh directory, then into scripts.
-    - `cd pugorugh/scripts`
-7. Run `data_import.py` to populate the database.
-    - `python data_import.py` 
-    (You will see a success message once data has loaded.)
-8. Return to the project directory.
-    - `cd..`
-    - `cd..`
+5. Run migrations to initialize the database and load test data.
+    - `python manage.py migrate`
+
     
 ### II. Set up the React front end 
 
@@ -57,17 +50,16 @@ to run everything. You'll be running Django on port 8000 and React on port 3000.
     (Make sure you're still in your virtual environment.)
     - `python manage.py runserver`
     (It needs to be running on port 8000, but it should do that automatically.)
-2. Open another terminal window, and change into the frontend directory.
+2. Open another terminal window in the project directory, and change into the frontend directory.
     - `cd frontend`
 3. Start the Node server. It should start on port 3000.
     - `npm start`
 4. This should open a new browser tab automatically, but if not, 
 open your browser and go to [127.0.0.1:3000](http://127.0.0.1:3000) to use the app.
 
-5. You can create a normal user using the register screen, 
-or you can create a superuser from the command line in the project directory.
- with
-    - `python manage.py createsuperuser`
-    
-Dogs can be deleted by the user who added them or an admin. 
+5. You can now register a new user from the login screen, or you can log in using the existing admin account:
 
+- Username: `admin`
+- Password: `test`
+    
+Dogs can be deleted by the user who added them or an admin.
