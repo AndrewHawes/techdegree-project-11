@@ -21,6 +21,7 @@ _If you haven't installed Node.js, you can find instructions at
 ###I. Set up the Django back end
 
 1. Download the project and change into the project directory.
+    (The one containing `manage.py`.)
 2. Create a new virtual environment 
     - Windows: `python -m venv env` 
     - Linux/Mac `python3 -m venv env`
