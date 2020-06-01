@@ -4,7 +4,8 @@ import styled from "styled-components";
 const Link = styled.button``;
 
 export const MessageBox = (props) => {
-  const navMsg = props.details === null ? "Start from beginning" : "Next dog"
+  const navMsg = props.details === null ? "Start from beginning" : "Next dog";
+  const showLink = props.details !== undefined;
 
   const navLink = (
     <p className='text-centered'>
@@ -15,7 +16,7 @@ export const MessageBox = (props) => {
   return (
     <div>
       <p className='text-centered'>{props.message}</p>
-      {navLink}
+      {showLink && navLink}
     </div>
   );
 };
