@@ -79,7 +79,7 @@ The tests must cover 50% of the code.
     -[x] Test coverage above 75%.
 
 #### Python Code Style
--[ ] The code is clean, readable, and well organized. It complies with most
+-[x] The code is clean, readable, and well organized. It complies with most
 common PEP 8 standards of style.
 
 
@@ -103,8 +103,3 @@ user is logged in
 -[x] Use months old to extrapolate age
 -[ ] Display message if user is denied permission to delete dog (status 403)
 
-
-JAVASCRIPT:
--[ ] Use default props to assign undefined in Dog?
--[ ] Fix display of error messages
--[ ] Clear login screen on reload (currently uses last value for username)
