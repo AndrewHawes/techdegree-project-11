@@ -58,3 +58,10 @@ to run everything. You'll be running Django on port 8000 and React on port 3000.
 4. This should open a new browser tab automatically, but if not, 
 open your browser and go to [127.0.0.1:3000](http://127.0.0.1:3000) to use the app.
 
+5. You can create a normal user using the register screen, 
+or you can create a superuser from the command line in the project directory.
+ with
+    - `python manage.py createsuperuser`
+    
+Dogs can be deleted by the user who added them or an admin. 
+
