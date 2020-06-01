@@ -1,6 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import TokenAuth from '../lib/token-auth';
+
+const RegisterLink = styled.button`
+`;
+
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -61,7 +66,8 @@ export default class Login extends React.Component {
           onChange={this.handleChange}
         />
         <button onClick={this.handleLogin} disabled={this.disabled()}>Login</button>
-        <a onClick={this.handleRegisterClick}>Register</a>
+        <RegisterLink as="a" onClick={this.handleRegisterClick}>Register</RegisterLink>
+        {/*<a onClick={this.handleRegisterClick}>Register</a>*/}
       </div>
     );
   }

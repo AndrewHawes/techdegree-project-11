@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 import TokenAuth from '../lib/token-auth';
 

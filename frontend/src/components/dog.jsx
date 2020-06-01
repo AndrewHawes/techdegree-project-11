@@ -1,14 +1,5 @@
 import React from 'react';
 
-import styled from 'styled-components'
-
-// TODO: check this
-const H2 = styled.h2`
-  font-family: 'Amatic SC', cursive;
-  font-size: 3em;
-  margin-bottom: 0;
-`;
-
 export default function Dog(props) {
     const genderLookup = {m: 'Male', f: 'Female'};
     const sizeLookup = {s: 'Small', m: 'Medium', l: 'Large', xl: 'Extra Large'};

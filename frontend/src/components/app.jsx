@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import TokenAuth from '../lib/token-auth';
 
@@ -9,6 +10,9 @@ import Login from './login';
 import DogForm from './dogForm';
 
 import logo from '../static/icons/logo.svg';
+
+const Link = styled.button``;
+// const Link = <button></button>
 
 export default class PugOrUgh extends React.Component {
   constructor(props) {
@@ -68,24 +72,23 @@ export default class PugOrUgh extends React.Component {
                 </ul>
                 {
                   TokenAuth.loggedIn() &&
-                    // eslint-disable-next-line
-                    <a href="# " onClick={this.handleLogoutClick}>Logout {TokenAuth.getUsername()}</a>
+                    <Link as="a" onClick={this.handleLogoutClick}>Logout {TokenAuth.getUsername()}</Link>
                 }
               </div>
               <div className='circle--fluid--cell circle--fluid--secondary'>
                 {TokenAuth.loggedIn() && <nav>
                   <ul className='circle--inline'>
                     <li key='0' className={this.state.viewName === 'liked' ? 'current-tab' : ''}>
-                      <a onClick={this.setView.bind(this, 'liked')}>Liked</a>
+                      <Link as="a" onClick={this.setView.bind(this, 'liked')}>Liked</Link>
                     </li>
                     <li key='1' className={this.state.viewName === 'undecided' ? 'current-tab' : ''}>
-                      <a onClick={this.setView.bind(this, 'undecided')}>Undecided</a>
+                      <Link as="a" onClick={this.setView.bind(this, 'undecided')}>Undecided</Link>
                     </li>
                     <li key='2' className={this.state.viewName === 'disliked' ? 'current-tab' : ''}>
-                      <a onClick={this.setView.bind(this, 'disliked')}>Disliked</a>
+                      <Link as="a" onClick={this.setView.bind(this, 'disliked')}>Disliked</Link>
                     </li>
                     <li key='3' className={this.state.viewName === 'new' ? 'current-tab' : ''}>
-                      <a className={'button-link'} onClick={this.setView.bind(this, 'new')}>Add New Dog</a>
+                      <Link as="a" className={'button-link'} onClick={this.setView.bind(this, 'new')}>Add New Dog</Link>
                     </li>
                   </ul>
                 </nav>}

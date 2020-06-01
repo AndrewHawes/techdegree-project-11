@@ -1,9 +1,12 @@
 import React from 'react';
+import styled from "styled-components";
+
+const Link = styled.button``;
 
 export const MessageBox = (props) => {
   const restartLink = (
     <p className='text-centered'>
-      <a onClick={props.getNext}>Start from beginning</a>
+      <Link as="a" onClick={props.getNext}>Start from beginning</Link>
     </p>
   );
 
