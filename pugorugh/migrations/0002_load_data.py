@@ -5,7 +5,6 @@ from django.core.management import call_command
 
 
 def populate_db(apps, schema_editor):
-    print('forwards')
     call_command('loaddata', 'dog_data.json', verbosity=2)
 
 
