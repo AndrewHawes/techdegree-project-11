@@ -56,5 +56,5 @@ to run everything. You'll be running Django on port 8000 and React on port 3000.
 3. Start the Node server. It should start on port 3000.
     - `npm start`
 4. This should open a new browser tab automatically, but if not, 
-open your browser and go to [127.0.0.1:3000](127.0.0.1:3000) to use the app.
+open your browser and go to [127.0.0.1:3000](http://127.0.0.1:3000) to use the app.
 

@@ -1,8 +1,6 @@
 from datetime import datetime
 
 from django.contrib.auth import get_user_model
-from django.core.exceptions import ObjectDoesNotExist
-from django.http import Http404
 
 from rest_framework import permissions
 from rest_framework.exceptions import NotFound
@@ -15,7 +13,6 @@ from rest_framework.response import Response
 from rest_framework.status import (
     HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_200_OK
 )
-from rest_framework.views import APIView
 
 from . import serializers
 from .models import UserPref, Dog, UserDog
@@ -49,8 +46,6 @@ class DeleteDogView(DestroyAPIView):
 class StatusView(RetrieveAPIView):
     serializer_class = DogSerializer
 
-    # TODO: change this to retrieve? Look at source to see what retrieve does
-
     def get(self, request, *args, **kwargs):
         instance = self.get_object()
 
@@ -73,15 +68,14 @@ class StatusView(RetrieveAPIView):
             dogs = user.userpref.get_preferred_dogs()
         else:
             dogs = Dog.objects.all()
-        # TODO: Write converter so only liked, disliked, undecided can be entered
-        if status in 'ld':
+
+        if status in 'ld':  # Liked/Disliked: return dogs linked to UserDog for user.
             return dogs.filter(userdog__user=user, userdog__status=status).exclude(userdog__hidden=True)
 
         else:  # Undecided: return dogs not linked to UserDog object for user.
             return dogs.exclude(userdog__user=user)
 
     def get_object(self, prev=False):
-        # pk = self.kwargs.get('pk')
         dogs = self.get_queryset()
 
         if dogs:
@@ -108,8 +102,8 @@ class NextStatusView(StatusView):
 
 
 class PrevStatusView(StatusView):
-    def get_object(self):
-        return super().get_object(prev=True)
+    def get_object(self, prev=True):
+        return super().get_object(prev)
 
 
 class SetStatusView(UpdateAPIView):

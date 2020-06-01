@@ -1,11 +1,13 @@
 import React from 'react';
 import TokenAuth from '../lib/token-auth';
 import axios from 'axios';
+import styled from 'styled-components';
 
 import Dog from '../components/dog';
 import DogControls from '../components/dogControls';
 import { MessageBox } from '../components/messageBox';
 
+const Link = styled.button``;
 
 export default class DogContainer extends React.Component {
   constructor(props) {
@@ -117,8 +119,8 @@ export default class DogContainer extends React.Component {
     const successMsg = `${this.state.details.name} successfully deleted.`;
 
     this.axios.delete(url)
-      .then(response => this.setState({ message: successMsg }), this.getNext())
-      .catch(error => this.setState({ message: error.response.data.detail }));
+      .then(response => this.setState({ message: successMsg }))
+      .catch(error => this.setState({ message: error.response.data.detail }))
   }
 
 
@@ -172,8 +174,7 @@ export default class DogContainer extends React.Component {
     return (
       <div>
         {this.contents()}
-        {/*<p className="text-centered"><a onClick={this.handlePreferencesClick}>Set Preferences</a></p>*/}
-        <p className="text-centered"><button onClick={this.handlePreferencesClick}>Set Preferences</button></p>
+        <p className="text-centered"><Link as="a" onClick={this.handlePreferencesClick}>Set Preferences</Link></p>
       </div>
     );
   }

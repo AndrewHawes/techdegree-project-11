@@ -1,11 +1,7 @@
-import tempfile
-
 from django.contrib.auth import get_user_model
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase
 
-from rest_framework.authtoken.models import Token
-from rest_framework.test import APIClient
 from rest_framework.test import APIRequestFactory
 from rest_framework.test import APITestCase
 from rest_framework.test import force_authenticate
@@ -13,9 +9,10 @@ from rest_framework.test import force_authenticate
 from .models import Dog, UserDog, UserPref
 from .choices import Age, Gender, Size, Type
 
-# views, models, other functions
-from .views import CreateDogView, DeleteDogView, NextStatusView, PrevStatusView, SetStatusView, HideDogView, \
-    SetPrefView, UserRegisterView
+from .views import (
+    CreateDogView, DeleteDogView, NextStatusView, PrevStatusView, SetStatusView,
+    HideDogView, SetPrefView, UserRegisterView
+)
 
 test_gif = (
     b'\x47\x49\x46\x38\x39\x61\x01\x00\x01\x00\x00\x00\x00\x21\xf9\x04'
@@ -42,7 +39,7 @@ class DogModelTest(TestCase):
     def setUpTestData(cls):
         Dog.objects.create(
             name='Max',
-            image ='images/dogs/testdog.jpg',
+            image='images/dogs/testdog.jpg',
             breed='Labrador',
             age=27,
             gender='m',
@@ -173,6 +170,7 @@ class UserRegisterViewTest(APITestCase):
         self.assertEqual(response.status_code, 400)
         self.assertIn('field may not be blank', response.data['password'][0])
 
+
 class CreateDogViewTest(APITestCase):
     def setUp(self):
         self.user = get_user_model().objects.create(username='User1')
@@ -195,7 +193,7 @@ class CreateDogViewTest(APITestCase):
         }
 
     def tearDown(self):
-       Dog.objects.filter(name='Dog1').delete()
+        Dog.objects.filter(name='Dog1').delete()
 
     def test_create(self):
         url = 'api/dog/new/'
@@ -324,7 +322,6 @@ class StatusViewTest(APITestCase):
     def test_no_liked_or_disliked_dogs(self):
         user = get_user_model().objects.create(username='NewTestUser')
 
-
         next_l_response = self.next_status(1, 'liked', user)
         prev_l_response = self.prev_status(1, 'liked', user)
         next_d_response = self.next_status(1, 'disliked', user)
@@ -335,6 +332,7 @@ class StatusViewTest(APITestCase):
         self.assertEqual(prev_l_response.data['detail'], 'No Results')
         self.assertEqual(next_d_response.data['detail'], 'No Results')
         self.assertEqual(prev_d_response.data['detail'], 'No Results')
+
 
 class ModifyUserDogTest(APITestCase):
     def setUp(self):
@@ -374,7 +372,7 @@ class ModifyUserDogTest(APITestCase):
         self.assertEqual(ddog.status, 'l')
 
         with self.assertRaises(UserDog.DoesNotExist):
-            ud3 = UserDog.objects.get(user=self.user, dog=self.ldog)
+            UserDog.objects.get(user=self.user, dog=self.ldog)
 
     def hide_dog(self, dog):
         pk = dog.pk
@@ -424,5 +422,3 @@ class SetPrefViewTest(APITestCase):
         userpref = response.data
         userpref.pop('id')
         self.assertDictEqual(userpref, new_prefs)
-
-

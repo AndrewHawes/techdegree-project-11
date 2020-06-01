@@ -12,7 +12,7 @@ import DogForm from './dogForm';
 import logo from '../static/icons/logo.svg';
 
 const Link = styled.button``;
-// const Link = <button></button>
+
 
 export default class PugOrUgh extends React.Component {
   constructor(props) {
@@ -43,7 +43,8 @@ export default class PugOrUgh extends React.Component {
       case 'new':
         return <DogForm setView={this.setView}/>;
       default:
-        return new Error("Unrecognized view requested.")
+        console.log("Unrecognized view requested.");
+        return <Login setView={this.setView}/>;
     }
   }
 

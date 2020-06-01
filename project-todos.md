@@ -84,29 +84,21 @@ common PEP 8 standards of style.
 
 
 #### Extras
--[ ] SETUP ADMIN
--[ ] Fix register to show error if username already exists
--[ ] Fix favicon
--[x] Redirect to dog page when adding dog.
--[ ] Make sure errors show up for form.
--[ ] Enter clicks login/register button
--[ ] CREATE PREFS AUTOMATICALLY - can_delete undefined
--[-] Add check for if dog is actually Carl Sagan. If user clicks both carl sagan and robot, redirect them to rant
- about how carl sagan definitely wasn't a robot with link. Link goes to rick roll.
+-[x] Fix register to show error if username already exists
+-[x] Fix favicon
+-[x] Redirect to dog page when adding dog
+-[x] Make sure errors show up for form
+-[-] Enter clicks login/register button
 -[x] Move dog images into media directory so it's not in static
 -[x] Make sure only added_by user or admin can delete a dog
--[ ] Set up custom user that creates userpref automatically on save
--[ ] Handle bad login information
+-[-] Set up custom user that creates userpref automatically on save
+-[x] Handle bad login information
 -[x] Create converter for status so user can't input random url
--[ ] Make sure only logged in users can add dogs
--[ ] Make sure only user who created a dog or admin can delete it
--[ ] Fix headings being used for styling
--[ ] Add labels for screen readers
--[ ] Make sure liked, disliked, undecided, new dog links are hidden unless
+-[x] Make sure only user who created a dog or admin can delete it
+-[x] Fix headings being used for styling
+-[x] Make sure liked, disliked, undecided, new dog links are hidden unless
 user is logged in
--[ ] Change frontend to initially receive an object from Django
-that lists its model properties. Use this to generate the frontend options.
--[ ] Automatically generate a form in react like in Django -- define form object types
+
 -[ ] Change React handler names: submitHandler -> handleSubmit
 -[x] Use months old to extrapolate age
 -[ ] Display message if user is denied permission to delete dog (status 403)
