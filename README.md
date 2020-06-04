@@ -32,7 +32,7 @@ _If you haven't installed Node.js, you can find instructions at
     - `pip install -r requirements.txt`
 5. Run migrations to initialize the database.
     - `python manage.py migrate`
-6. Load the test data in the `dog_data.json` fixture.
+6. Load the initial data in the `dog_data.json` fixture.
     - `python manage.py loaddata dog_data.json`
 
     
