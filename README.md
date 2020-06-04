@@ -30,8 +30,10 @@ _If you haven't installed Node.js, you can find instructions at
     - Linux/Mac: `source env/bin/activate`
 4. Install the project's Python dependencies.
     - `pip install -r requirements.txt`
-5. Run migrations to initialize the database and load test data.
+5. Run migrations to initialize the database.
     - `python manage.py migrate`
+6. Load the test data in the `dog_data.json` fixture.
+    - `python manage.py loaddata dog_data.json`
 
     
 ### II. Set up the React front end 
