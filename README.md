@@ -24,7 +24,7 @@ _If you haven't installed Node.js, you can find instructions at
     (The one containing `manage.py`.)
 2. Create a new virtual environment 
     - Windows: `python -m venv env` 
-    - Linux/Mac `python3 -m venv env`
+    - Linux/Mac: `python3 -m venv env`
 3. Activate the virtual environment
     - Windows: `.\env\Scripts\activate`
     - Linux/Mac: `source env/bin/activate`
